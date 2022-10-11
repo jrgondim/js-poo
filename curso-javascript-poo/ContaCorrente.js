@@ -2,16 +2,9 @@ import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
     agencia;
-    _cliente;
+    cliente;
 
-    _saldo = 0;
 
-    /**
-     * @param {number | Cliente} novoValor
-     */
-    set cliente(novoValor) {
-        this._cliente = novoValor;
-    }
 
     sacar(valor){
         if(this.saldo < valor) return;

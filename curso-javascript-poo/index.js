@@ -18,14 +18,14 @@ contaCliente1.saldo = 0;
 
 const contaCliente2 = new ContaCorrente();
 contaCliente2.agencia = 2002;
-contaCliente2.cliente = 0;
+contaCliente2.cliente = cliente2;
 contaCliente2.conta = 344234-9;
 contaCliente2.saldo = 0;
 
 contaCliente1.depositar(4000);
 contaCliente2.depositar(10000);
 
-
+contaCliente1.sacar(4000);
 contaCliente2.transferir(100, contaCliente1);
 
 
