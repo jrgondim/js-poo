@@ -1,29 +1,21 @@
-import {Cliente} from "./Cliente.js";
-import {ContaCorrente} from "./ContaCorrente.js";
+import {Cliente} from "./Cliente.js"
+import {ContaCorrente} from "./ContaCorrente.js"
 
-const cliente1 = new Cliente("Emanuel", 1234567890);
-
-const cliente2 = new Cliente("Marly", 987654321);
-
-const contaCliente1 = new ContaCorrente();
-contaCliente1.agencia = 2002;
-contaCliente1.cliente = cliente1;
-contaCliente1.conta = 12122-7
-contaCliente1.saldo = 0;
-
-const contaCliente2 = new ContaCorrente();
-contaCliente2.agencia = 2002;
-contaCliente2.cliente = cliente2;
-contaCliente2.conta = 344234-9;
-contaCliente2.saldo = 0;
-
-contaCliente1.depositar(4000);
-contaCliente2.depositar(10000);
-
-contaCliente1.sacar(4000);
-contaCliente2.transferir(100, contaCliente1);
+const cliente1 = new Cliente("Emanuel Gondim", 77777777777);
+const cliente2 = new Cliente("Marly", 88888888888);
 
 
-console.log(contaCliente1);
-console.log("-----------------------------------");
-console.log(contaCliente2);
+const conta1 = new ContaCorrente(1001, cliente1);
+conta1.depositar(500);
+conta1.sacar(100);
+
+const conta2 = new ContaCorrente(102, cliente2);
+conta2.depositar(10000);
+
+
+conta1.tranferir(200, conta2);
+
+console.log(conta1);
+console.log(conta2);
+
+
